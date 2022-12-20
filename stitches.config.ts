@@ -1,6 +1,8 @@
 import type * as Stitches from '@stitches/react'
 import { createStitches } from '@stitches/react'
 
+import { mauve, mauveDark, violet, violetDark } from '@radix-ui/colors'
+
 export const {
   config,
   createTheme,
@@ -12,49 +14,10 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      hiContrast: 'hsl(206,10%,5%)',
-      loContrast: 'white',
-
-      gray100: 'hsl(206,22%,99%)',
-      gray200: 'hsl(206,12%,97%)',
-      gray300: 'hsl(206,11%,92%)',
-      gray400: 'hsl(206,10%,84%)',
-      gray500: 'hsl(206,10%,76%)',
-      gray600: 'hsl(206,10%,44%)',
-
-      purple100: 'hsl(252,100%,99%)',
-      purple200: 'hsl(252,100%,98%)',
-      purple300: 'hsl(252,100%,94%)',
-      purple400: 'hsl(252,75%,84%)',
-      purple500: 'hsl(252,78%,60%)',
-      purple600: 'hsl(252,80%,53%)',
-    },
-    space: {
-      1: '5px',
-      2: '10px',
-      3: '15px',
-      4: '20px',
-      5: '25px',
-      6: '35px',
-    },
-    sizes: {
-      1: '5px',
-      2: '10px',
-      3: '15px',
-      4: '20px',
-      5: '25px',
-      6: '35px',
-    },
-    fontSizes: {
-      1: '12px',
-      2: '13px',
-      3: '15px',
-      4: '17px',
-      5: '19px',
-      6: '21px',
-    },
-    fonts: {
-      system: 'system-ui',
+      ...mauve,
+      ...violet,
+      discord: '#404EED',
+      green: '#3BA55D',
     },
   },
   utils: {
@@ -74,9 +37,64 @@ export const {
       paddingTop: value,
       paddingBottom: value,
     }),
+    align: (value: Stitches.PropertyValue<'alignItems'>) => ({
+      alignItems: value,
+    }),
+    justify: (value: Stitches.PropertyValue<'justifyContent'>) => ({
+      justifyContent: value,
+    }),
   },
   media: {
-    bp1: '(min-width: 520px)',
-    bp2: '(min-width: 900px)',
+    mobile: '(max-width: 460px)',
+    small: '(max-width: 720px)',
+    medium: '(max-width: 1000px)',
   },
 })
+
+export const darkTheme = createTheme({
+  colors: {
+    ...mauveDark,
+    ...violetDark,
+    discord: '#404EED',
+    green: '#3BA55D',
+  },
+})
+
+const GlobalStyles = globalCss({
+  html: {
+    scrollBehavior: 'smooth',
+  },
+  '*': { margin: 0, padding: 0, boxSizing: 'border-box' },
+  body: {
+    backgroundColor: '$mauve1',
+    height: '100vh',
+    width: '100vw',
+    overflowX: 'hidden',
+  },
+  button: {
+    cursor: 'pointer',
+    border: 0,
+    background: 'transparent',
+  },
+  'body, input, textarea, button': {
+    fontFamily: 'Roboto',
+  },
+  a: {
+    textDecoration: 'none',
+  },
+  'p, h1, h2, h3, h4, h5, h6, strong': {
+    color: '$mauve12',
+  },
+  '::-webkit-scrollbar': {
+    width: 12,
+  },
+  '::-webkit-scrollbar-track': {
+    background: '$mauve3',
+  },
+  '::-webkit-scrollbar-thumb': {
+    background: '$mauve6',
+    borderRadius: 6,
+  },
+})
+
+GlobalStyles()
