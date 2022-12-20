@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { Carousel } from '@mantine/carousel'
+
 import { ProjectCard } from '../ProjectCard'
 import { Section, SectionHeading } from '../Section'
 import * as S from './styles'
@@ -49,11 +51,9 @@ export const Projects = () => {
       >
         <S.ImagesCarousel loop>
           {selectedProject?.images.map((src) => (
-            <img
-              src={src}
-              key={selectedProject?.id}
-              alt={selectedProject?.name}
-            />
+            <Carousel.Slide key={selectedProject?.id}>
+              <img src={src} alt={selectedProject?.name} />
+            </Carousel.Slide>
           ))}
         </S.ImagesCarousel>
         <p>{selectedProject?.description}</p>
