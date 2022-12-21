@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Image from 'next/image'
 import { Carousel, Embla, useAnimationOffsetEffect } from '@mantine/carousel'
 
 import { ProjectCard } from '../ProjectCard'
@@ -76,7 +77,14 @@ export const Projects = () => {
           >
             {selectedProject?.images.map((src) => (
               <Carousel.Slide key={selectedProject?.id}>
-                <img src={src} alt={selectedProject?.name} />
+                <Image
+                  placeholder="blur"
+                  blurDataURL={src}
+                  src={src}
+                  alt={selectedProject?.name}
+                  width={660}
+                  height={330}
+                />
               </Carousel.Slide>
             ))}
           </S.ImagesCarousel>

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 
 import * as S from './styles'
@@ -26,7 +27,9 @@ export const ProjectCard = ({
         layoutId={`project-container-${id}`}
         onClick={onClick}
       >
-        <img src={imageUrl} alt={name} />
+        <S.ImageContainer>
+          <Image fill src={imageUrl} alt={name} />
+        </S.ImageContainer>
         <S.ProjectCardBody>
           <strong>{name}</strong>
         </S.ProjectCardBody>

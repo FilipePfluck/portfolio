@@ -13,6 +13,10 @@ export const ButtonContainer = styled('button', {
   border: 0,
   transition: '0.2s',
 
+  '@mobile': {
+    width: '100%',
+  },
+
   '&:hover': {
     filter: 'brightness(0.8)',
   },

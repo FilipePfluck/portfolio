@@ -12,14 +12,20 @@ export const ProjectCardContainer = styled(motion.section, {
   transition: '0.2s',
   overflow: 'hidden',
   cursor: 'pointer',
-
-  img: {
-    height: '50%',
-    objectFit: 'cover',
-  },
+  position: 'relative',
 
   '&:hover': {
     background: '$mauve4',
+  },
+})
+
+export const ImageContainer = styled('div', {
+  position: 'relative',
+  height: '50%',
+  width: '100%',
+
+  img: {
+    objectFit: 'cover',
   },
 })
 
