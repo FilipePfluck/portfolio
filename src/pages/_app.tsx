@@ -2,7 +2,6 @@ import type { AppProps } from 'next/app'
 import { MantineProvider } from '@mantine/core'
 import { ThemeProvider } from 'next-themes'
 import { darkTheme } from '../../stitches.config'
-import { rtlCache } from '../../rtl-cache'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -14,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         dark: darkTheme.className,
       }}
     >
-      <MantineProvider withNormalizeCSS emotionCache={rtlCache}>
+      <MantineProvider withNormalizeCSS>
         <Component {...pageProps} />
       </MantineProvider>
     </ThemeProvider>
