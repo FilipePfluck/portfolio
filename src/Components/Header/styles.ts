@@ -173,3 +173,18 @@ export const LanguageSelect = styled(Select, {
     color: '$mauve12',
   },
 })
+
+export const LanguageSelectSkeleton = styled('div', {
+  width: 120,
+  height: 36,
+  backgroundColor: '$mauve6',
+  borderRadius: 8,
+})
+
+export const ThemeSwithcSkeleton = styled('div', {
+  width: 48,
+  height: 26,
+  backgroundColor: '$mauve5',
+  borderRadius: 16,
+  margin: 'auto 0',
+})
