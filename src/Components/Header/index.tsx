@@ -6,7 +6,7 @@ import * as S from './styles'
 import { data } from '../../data'
 import { useRouter } from 'next/router'
 import { Locale } from '../../types'
-import { useEffect, useState } from 'react'
+import { /* useEffect, */ useState } from 'react'
 
 interface HeaderProps {
   currentSection: string
@@ -17,7 +17,7 @@ export const Header = ({ currentSection }: HeaderProps) => {
   const { theme, setTheme } = useTheme()
 
   const [firstLanguage] = useState<string>(locale as Locale)
-  const [isInBrowser, setIsInBrowser] = useState(false)
+  // const [isInBrowser, setIsInBrowser] = useState(false)
 
   const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light')
 
@@ -31,9 +31,9 @@ export const Header = ({ currentSection }: HeaderProps) => {
     }
   }
 
-  useEffect(() => {
+  /* useEffect(() => {
     setIsInBrowser(true)
-  }, [])
+  }, []) */
 
   return (
     <S.HeaderContainer>
