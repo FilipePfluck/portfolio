@@ -1,70 +1,83 @@
 import { useTheme } from 'next-themes'
-import { useViewportSize } from '@mantine/hooks'
 import { FaLinkedin, FaGithub, FaTwitch, FaSun, FaMoon } from 'react-icons/fa'
 
 import * as S from './styles'
+
+import { data } from '../../data'
+import { useRouter } from 'next/router'
+import { Locale } from '../../types'
+import { useState } from 'react'
 
 interface HeaderProps {
   currentSection: string
 }
 
 export const Header = ({ currentSection }: HeaderProps) => {
+  const { locale, push } = useRouter()
   const { theme, setTheme } = useTheme()
 
-  const { width } = useViewportSize()
+  const [firstLanguage] = useState<string>(locale as Locale)
+
+  console.log({ firstLanguage })
 
   const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light')
+
+  const headerData = data.header[locale as Locale]
+
+  const changeLanguage = (value: string) => {
+    if (value === '🇧🇷 pt-BR') {
+      push('/', '/', { locale: 'pt-BR' })
+    } else {
+      push('/', '/', { locale: 'en' })
+    }
+  }
 
   return (
     <S.HeaderContainer>
       <div>
-        {width > 460 && (
-          <S.Nav>
-            <S.Link href="#aboutMe" isSelected={currentSection === 'aboutMe'}>
-              Sobre mim
-              {currentSection === 'aboutMe' && (
-                <S.CurrentSectionIndicator
-                  layout
-                  layoutId="underline"
-                  transition={{ duration: 0.2 }}
-                />
-              )}
-            </S.Link>
-            <S.Link
-              href="#myHistory"
-              isSelected={currentSection === 'myHistory'}
-            >
-              Minha história
-              {currentSection === 'myHistory' && (
-                <S.CurrentSectionIndicator
-                  layout
-                  layoutId="underline"
-                  transition={{ duration: 0.2 }}
-                />
-              )}
-            </S.Link>
-            <S.Link href="#projects" isSelected={currentSection === 'projects'}>
-              Projetos
-              {currentSection === 'projects' && (
-                <S.CurrentSectionIndicator
-                  layout
-                  layoutId="underline"
-                  transition={{ duration: 0.2 }}
-                />
-              )}
-            </S.Link>
-            <S.Link href="#techs" isSelected={currentSection === 'techs'}>
-              Tecnologias
-              {currentSection === 'techs' && (
-                <S.CurrentSectionIndicator
-                  layout
-                  layoutId="underline"
-                  transition={{ duration: 0.2 }}
-                />
-              )}
-            </S.Link>
-          </S.Nav>
-        )}
+        <S.Nav>
+          <S.Link href="#aboutMe" isSelected={currentSection === 'aboutMe'}>
+            {headerData.aboutMe}
+            {currentSection === 'aboutMe' && (
+              <S.CurrentSectionIndicator
+                layout
+                layoutId="underline"
+                transition={{ duration: 0.2 }}
+              />
+            )}
+          </S.Link>
+          <S.Link href="#myHistory" isSelected={currentSection === 'myHistory'}>
+            {headerData.myHistory}
+            {currentSection === 'myHistory' && (
+              <S.CurrentSectionIndicator
+                layout
+                layoutId="underline"
+                transition={{ duration: 0.2 }}
+              />
+            )}
+          </S.Link>
+          <S.Link href="#projects" isSelected={currentSection === 'projects'}>
+            {headerData.projects}
+            {currentSection === 'projects' && (
+              <S.CurrentSectionIndicator
+                layout
+                layoutId="underline"
+                transition={{ duration: 0.2 }}
+              />
+            )}
+          </S.Link>
+          <S.Link href="#techs" isSelected={currentSection === 'techs'}>
+            {headerData.techs}
+            {currentSection === 'techs' && (
+              <S.CurrentSectionIndicator
+                layout
+                layoutId="underline"
+                transition={{ duration: 0.2 }}
+              />
+            )}
+          </S.Link>
+        </S.Nav>
+
         <S.RightContent>
           <a
             href="https://www.linkedin.com/in/filipe-hebestreit-pfluck-9389a31a6/"
@@ -90,13 +103,21 @@ export const Header = ({ currentSection }: HeaderProps) => {
             <FaTwitch />
           </a>
 
-          <S.ThemeSwitch
-            onChange={toggleTheme}
-            color="violet"
-            thumbIcon={
-              theme === 'light' ? <FaSun size={12} /> : <FaMoon size={12} />
-            }
-          />
+          <div>
+            <S.LanguageSelect
+              data={['🇧🇷 pt-BR', '🇺🇸 en-US']}
+              defaultValue={firstLanguage === 'pt-BR' ? '🇧🇷 pt-BR' : '🇺🇸 en-US'}
+              onChange={changeLanguage}
+            />
+
+            <S.ThemeSwitch
+              onChange={toggleTheme}
+              color="violet"
+              thumbIcon={
+                theme === 'light' ? <FaSun size={12} /> : <FaMoon size={12} />
+              }
+            />
+          </div>
         </S.RightContent>
       </div>
     </S.HeaderContainer>

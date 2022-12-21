@@ -1,5 +1,5 @@
 import { styled } from '../../../stitches.config'
-import { Switch } from '@mantine/core'
+import { Switch, Select } from '@mantine/core'
 import { motion } from 'framer-motion'
 
 export const HeaderContainer = styled('header', {
@@ -21,6 +21,10 @@ export const HeaderContainer = styled('header', {
     maxWidth: 1000,
     margin: '0 auto',
     height: '100%',
+
+    '@small': {
+      justify: 'space-between',
+    },
   },
 
   '@medium': {
@@ -33,6 +37,10 @@ export const Nav = styled('nav', {
   alignItems: 'center',
   gap: 32,
   height: '100%',
+
+  '@small': {
+    display: 'none',
+  },
 })
 
 export const Link = styled('a', {
@@ -75,6 +83,15 @@ export const RightContent = styled('div', {
   lineHeight: 0,
   gap: 12,
 
+  '>div': {
+    display: 'flex',
+    gap: 12,
+
+    '@small': {
+      marginLeft: 'auto',
+    },
+  },
+
   a: {
     color: '$mauve12',
     lineHeight: 0,
@@ -87,12 +104,15 @@ export const RightContent = styled('div', {
   },
 
   '@mobile': {
-    width: '100%',
     justifyContent: 'center',
     margin: '0 16px',
     ':last-child': {
       marginLeft: 'auto',
     },
+  },
+
+  '@small': {
+    wodth: '100%',
   },
 })
 
@@ -122,5 +142,34 @@ export const ThemeSwitch = styled(Switch, {
       width: 10,
       color: '$mauve12',
     },
+  },
+})
+
+export const LanguageSelect = styled(Select, {
+  width: 120,
+
+  '.mantine-Select-input, .mantine-Select-dropdown': {
+    backgroundColor: '$mauve6',
+    border: 0,
+
+    '&:focus': {
+      border: '$mauve8',
+    },
+  },
+
+  '.mantine-Select-item': {
+    backgroundColor: '$mauve6',
+
+    '&:focus': {
+      backgroundColor: '$mauve7',
+    },
+
+    '&:hover': {
+      backgroundColor: '$mauve7',
+    },
+  },
+
+  '*': {
+    color: '$mauve12',
   },
 })

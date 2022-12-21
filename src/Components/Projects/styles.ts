@@ -39,9 +39,9 @@ export const ProjectModal = styled(Modal, {
   },
 
   img: {
-    height: 360,
+    maxHeight: 360,
     width: 660,
-    objectFit: 'cover',
+    objectFit: 'scale-down',
   },
 
   p: {
@@ -54,8 +54,8 @@ export const ImagesCarousel = styled(Carousel, {
   position: 'absolute',
   top: 0,
   left: 0,
-  height: 360,
   width: 660,
+  backgroundColor: '$mauve1',
 })
 
 export const SectionDescription = styled('p', {

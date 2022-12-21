@@ -1,16 +1,29 @@
 import { useState } from 'react'
-import { Carousel } from '@mantine/carousel'
+import { Carousel, Embla, useAnimationOffsetEffect } from '@mantine/carousel'
 
 import { ProjectCard } from '../ProjectCard'
 import { Section, SectionHeading } from '../Section'
 import * as S from './styles'
 
 import { data } from '../../data'
+import { useRouter } from 'next/router'
+import { Locale } from '../../types'
 
 export const Projects = () => {
-  const [selectedId, setSelectedId] = useState<number | null>(null)
+  const { locale } = useRouter()
 
-  const selectedProject = selectedId ? data.projects[selectedId - 1] : null
+  const [selectedId, setSelectedId] = useState<number | null>(null)
+  const [embla, setEmbla] = useState<Embla | null>(null)
+
+  const transitionDuration = 200
+
+  useAnimationOffsetEffect(embla, transitionDuration)
+
+  const projects = data.projects[locale as Locale]
+
+  const selectedProject = selectedId ? projects[selectedId - 1] : null
+  const projectsDescription =
+    data.projectDescription[locale as Locale].description
 
   return (
     <Section id="projects">
@@ -18,7 +31,7 @@ export const Projects = () => {
         <SectionHeading>Projetos</SectionHeading>
 
         <S.ProjectsGrid>
-          {data.projects.map((project) => (
+          {projects.map((project) => (
             <ProjectCard
               key={project.id}
               id={project.id}
@@ -30,8 +43,7 @@ export const Projects = () => {
           ))}
         </S.ProjectsGrid>
         <S.SectionDescription>
-          Eses são só alguns dos meus projetos. Quer ver todos? Eles estão no
-          meu
+          {projectsDescription}
           <a
             href="https://github.com/FilipePfluck?tab=repositories"
             target="_blank"
@@ -48,14 +60,27 @@ export const Projects = () => {
         onClose={() => setSelectedId(null)}
         title={selectedProject?.name}
         centered
+        transitionDuration={transitionDuration}
       >
-        <S.ImagesCarousel loop>
-          {selectedProject?.images.map((src) => (
-            <Carousel.Slide key={selectedProject?.id}>
-              <img src={src} alt={selectedProject?.name} />
-            </Carousel.Slide>
-          ))}
-        </S.ImagesCarousel>
+        {
+          // This validation is to prevent an error in Mantine Carousel from happening
+          // when the modal is closed
+        }
+        {!!selectedId && (
+          <S.ImagesCarousel
+            loop
+            getEmblaApi={setEmbla}
+            withControls={
+              selectedProject ? selectedProject?.images.length >= 2 : false
+            }
+          >
+            {selectedProject?.images.map((src) => (
+              <Carousel.Slide key={selectedProject?.id}>
+                <img src={src} alt={selectedProject?.name} />
+              </Carousel.Slide>
+            ))}
+          </S.ImagesCarousel>
+        )}
         <p>{selectedProject?.description}</p>
       </S.ProjectModal>
     </Section>
