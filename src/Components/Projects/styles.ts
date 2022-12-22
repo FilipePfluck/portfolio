@@ -29,6 +29,10 @@ export const ProjectModal = styled(Modal, {
     width: 660,
     borderRadius: 16,
     overflow: 'hidden',
+
+    '@mobile': {
+      width: 330,
+    },
   },
 
   '.mantine-Modal-title': {
@@ -36,12 +40,21 @@ export const ProjectModal = styled(Modal, {
     fontSize: 24,
     fontWeight: 'bold',
     paddingTop: 360,
+
+    '@mobile': {
+      paddingTop: 180,
+    },
   },
 
   img: {
     maxHeight: 360,
     width: 660,
     objectFit: 'scale-down',
+
+    '@mobile': {
+      width: 330,
+      maxHeight: 180,
+    },
   },
 
   p: {
@@ -56,6 +69,10 @@ export const ImagesCarousel = styled(Carousel, {
   left: 0,
   width: 660,
   backgroundColor: '$mauve1',
+
+  '@mobile': {
+    width: 330,
+  },
 })
 
 export const SectionDescription = styled('p', {
