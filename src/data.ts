@@ -36,6 +36,17 @@ export const data = {
       },
       {
         id: 2,
+        name: 'Ignite Call',
+        description:
+          'O Ignite Call é uma aplicação onde outras pessoas podem escolher um dia e horário para marcar um agendamento na sua agenda do Google. Esse projeto foi feito com Next, NextAuth, Prisma, dentre outras tecnologias.',
+        github_url: 'https://github.com/FilipePfluck/ignite-call',
+        images: [
+          '/projects/ignite-call/landing.png',
+          '/projects/ignite-call/calendar.png',
+        ],
+      },
+      {
+        id: 3,
         name: 'Ignews',
         description:
           'Essa foi uma das principais aplicações desenvolvidas no Ignite. Nela, eu aprendi muito sobre Next, CDNs, Stripe e NextAuth.',
@@ -43,7 +54,7 @@ export const data = {
         images: ['/projects/ignews/ignews.png', '/projects/ignews/ignews.gif'],
       },
       {
-        id: 3,
+        id: 4,
         name: 'Github Blog',
         description:
           'Essa aplicação foi feita para o terceiro desafio da trilha de React do Ignite. É uma aplicação que lista issues desse repositório como se fossem posts de um blog.',
@@ -54,7 +65,7 @@ export const data = {
         ],
       },
       {
-        id: 4,
+        id: 5,
         name: 'Nlw Heat',
         description:
           'Essa aplicação foi feita em uma edição da NLW. Ela permite o usuário conectar com o Github e deixar um comentário. O maior conhecimento que eu adquiri com esse projeto foi a utilização de Socket na api, permitindo uma conexão em tempo real ininterrupta entre o backend e o frontend, o que permite que os comentários apareçam imediatamente. Como toque final, eu adicionei animações no surgimento e desaparecimento das mensagens utilizando Framer Motion,',
@@ -65,7 +76,7 @@ export const data = {
         ],
       },
       {
-        id: 5,
+        id: 6,
         name: 'Nlw Esports',
         description:
           'Essa é uma aplicação destinada a gamers que procuram um duo. Ela foi desenvolvida durante a Nlw edição especial de Esports. A api foi desenvolvida com Node, Express, Prisma e o banco de dados escolhido durante as aulas foi o sqlite, pela facilidade de configuração. A versão para web foi feita com React, Tailwind e Radix. Também foi desenvolvido um aplicativo mobile utilizando React Native e Expo.',
@@ -76,7 +87,7 @@ export const data = {
         ],
       },
       {
-        id: 6,
+        id: 7,
         name: 'Moveit',
         description:
           'O propósito da aplicação é auxiliar a prática do Pomodoro: estratégia muito comum para aumentar a produtividade. O usuário inicia um timer de 25 minutos, e foca no trabalho durante esse tempo. Ao término, é liberado um pequeno desafio, como piscar os olhos ou fazer um alongamento. Quando o usuário termina um desafio, ele ganha XP e sobe de nível.',
@@ -84,7 +95,7 @@ export const data = {
         images: ['/projects/moveit/moveit.png'],
       },
       {
-        id: 7,
+        id: 8,
         name: 'Ignite Timer',
         description:
           'Essa aplicação foi desenvolvida no segundo módulo do Ignite. É um timer para realização de ciclos de pomodoro. Além do timer, a aplicação mantém um histórico dos ciclos realizados. É uma aplicação bem simples, mas além de revisar conceitos básicos do React, eu pude aprender sobre o Reducer.',
@@ -96,7 +107,7 @@ export const data = {
         ],
       },
       {
-        id: 8,
+        id: 9,
         name: 'Coffee Delivery',
         description:
           'Essa aplicação foi feita para o segundo desafio da nova trilha de React do Ignite. É uma aplicação para uma loja de café. Nesse projeto, revisei conceitos básicos de React e da biblioteca React Hook Form.',
@@ -108,7 +119,7 @@ export const data = {
         ],
       },
       {
-        id: 9,
+        id: 10,
         name: 'Discord Clone',
         description:
           'Esse projeto é um clone da interface do Discord, eu estou desenvolvendo ele com o objetivo de melhorar minhas habilidades de desenvolvimento de interfaces.',
@@ -116,7 +127,7 @@ export const data = {
         images: ['/projects/discord/discord-1.png'],
       },
       {
-        id: 10,
+        id: 11,
         name: 'Framer Motion Clone',
         description:
           'Framer Motion é uma biblioteca para criação de animações de forma declarativa, e eu decidi testar meus conhecimentos com essa ferramenta criando um clone da landing page do próprio framer motion.',
@@ -136,7 +147,7 @@ export const data = {
       }, */
 
       {
-        id: 11,
+        id: 12,
         name: 'Ignite Lab 2',
         description:
           'Essa aplicação foi desenvolvida durante o segundo Ignite Lab, um evento proporcionado pela Rocketseat. Nesse evento, eu aprendi mais sobre Graphql e Apollo. A aplicação é basicamente um site com a landing page do evento, e uma página com uma lista de aulas e um player de vídeo.',
@@ -148,7 +159,7 @@ export const data = {
         ],
       },
       {
-        id: 12,
+        id: 13,
         name: 'Ignite Lab 4',
         description:
           'Essa aplicação é um microserviço de notification center desenvolvido durante o quarto Ignite Lab. Nesse projeto, eu aprimorei meus conhecimentos sobre Nest e Prisma, além de conhecer vários conceitos novos de design de software.',
@@ -156,7 +167,7 @@ export const data = {
         images: ['/projects/ignite-lab-4/ignite-lab-4.png'],
       },
       {
-        id: 13,
+        id: 14,
         name: 'Gungi',
         description:
           'Esse é um fangame baseado no jogo de mesmo nome em Hunter x Hunter.',
@@ -164,7 +175,7 @@ export const data = {
         images: ['/projects/gungi/gungi-1.png', '/projects/gungi/gungi-2.png'],
       },
       {
-        id: 14,
+        id: 15,
         name: 'Worldtrip',
         description:
           'Esse projeto foi um dos desafios do Ignite. Com ele, eu pude aperfeiçoar meus conhecimentos sobre ChackraUI.',
@@ -176,7 +187,7 @@ export const data = {
       },
 
       {
-        id: 15,
+        id: 16,
         name: 'Rocketshoes',
         description:
           'Esse projeto foi um dos desafios do Ignite. O objetivo foi criar um Hook para gerenciar o carrinho de compras.',
@@ -187,7 +198,7 @@ export const data = {
         ],
       },
       {
-        id: 16,
+        id: 17,
         name: 'Dashgo',
         description:
           'O dashgo foi um projeto desenvolvido no Ignite, onde pude utilizar diversos componentes do ChakraUI.',
@@ -195,7 +206,7 @@ export const data = {
         images: ['/projects/dashgo/dashgo.png', '/projects/dashgo/dashgo.gif'],
       },
       {
-        id: 17,
+        id: 18,
         name: 'GoMarketplace',
         description:
           'O GoMarketplace é um e-commerce que foi desenvolvido como um dos desafios do bootcamp Gostack. Ele exibe uma lista de produtos que vêm de uma fakeapi. O usuário pode adicionar os produtos ao carrinho, e a aplicação calucla a quantidade de produtos e o preço total.',
@@ -206,7 +217,7 @@ export const data = {
         ],
       },
       {
-        id: 18,
+        id: 19,
         name: 'GoRestaurant',
         description:
           'Esse projeto foi um dos desafios do GoStack. É uma aplicação para gerenciar pratos de um restaurante italiano.',
@@ -228,6 +239,17 @@ export const data = {
       },
       {
         id: 2,
+        name: 'Ignite Call',
+        description:
+          'Ignite Call is an application where other people can schedule an appointment in your Google Calendar. This project was made with Next, NextAuth, Prisma and other technologies.',
+        github_url: 'https://github.com/FilipePfluck/ignite-call',
+        images: [
+          '/projects/ignite-call/landing.png',
+          '/projects/ignite-call/calendar.png',
+        ],
+      },
+      {
+        id: 3,
         name: 'Ignews',
         description:
           'This was one of the main projects developed during Ignite. I learned a lot about Next, CDNs, Stripe and NextAuth.',
@@ -235,7 +257,7 @@ export const data = {
         images: ['/projects/ignews/ignews.png', '/projects/ignews/ignews.gif'],
       },
       {
-        id: 3,
+        id: 4,
         name: 'Github Blog',
         description:
           "This application was Ignite's third challenge. It lists issues from a repository as if they were blog posts.",
@@ -246,7 +268,7 @@ export const data = {
         ],
       },
       {
-        id: 4,
+        id: 5,
         name: 'Nlw Heat',
         description:
           'This application was developed during a Next Level Week. It allows the user to connect with Github and write a comment. The greates learning I had while developing this project was the utilization of the Socket protocol. I also added animations when the messages appear and disappear using Framer Motion.',
@@ -257,7 +279,7 @@ export const data = {
         ],
       },
       {
-        id: 5,
+        id: 6,
         name: 'Nlw Esports',
         description:
           'This application was made for gamers to found their duos. It was developed during a Next Level Week. The API was developed with Node, Express, Prisma. The frontend was developed with React, Tailwind and Radix. I also developed a mobile app with React Native and Expo.',
@@ -268,7 +290,7 @@ export const data = {
         ],
       },
       {
-        id: 6,
+        id: 7,
         name: 'Moveit',
         description:
           'The purpouse of this application is to help its users in practicing Pomodoro. The user starts a 25 minute timer and focus in their work meanwhile. After finishing a cycle, the user is challenged to blink their eyes or stretch. When the challenge is completed, the user receives XP and may level up.',
@@ -276,7 +298,7 @@ export const data = {
         images: ['/projects/moveit/moveit.png'],
       },
       {
-        id: 7,
+        id: 8,
         name: 'Ignite Timer',
         description:
           'Essa aplicação foi desenvolvida no segundo módulo do Ignite. É um timer para realização de ciclos de pomodoro. Além do timer, a aplicação mantém um histórico dos ciclos realizados. É uma aplicação bem simples, mas além de revisar conceitos básicos do React, eu pude aprender sobre o Reducer.',
@@ -288,7 +310,7 @@ export const data = {
         ],
       },
       {
-        id: 8,
+        id: 9,
         name: 'Coffee Delivery',
         description:
           "This application was made for the second challenge of Ignite's new React track. It's an application for a coffee shop. In this project, I reviewed basic concepts of React and the React Hook Form library.",
@@ -300,7 +322,7 @@ export const data = {
         ],
       },
       {
-        id: 9,
+        id: 10,
         name: 'Discord Clone',
         description:
           "This project is a clone of the Discord interface, I'm developing it to improving my interface development skills.",
@@ -308,7 +330,7 @@ export const data = {
         images: ['/projects/discord/discord-1.png'],
       },
       {
-        id: 10,
+        id: 11,
         name: 'Framer Motion Clone',
         description:
           "Framer Motion is a library for declaratively creating animations, and I decided to test my knowledge with this tool by creating a clone of Framer Motion's own landing page.",
@@ -328,7 +350,7 @@ export const data = {
       }, */
 
       {
-        id: 11,
+        id: 12,
         name: 'Ignite Lab 2',
         description:
           'This application was developed during the second Ignite Lab, an event organized by Rocketseat. In this event, I learned more about Graphql and Apollo. The application is basically a website with the landing page of the event, and a page with a list of classes and a video player.',
@@ -340,7 +362,7 @@ export const data = {
         ],
       },
       {
-        id: 12,
+        id: 13,
         name: 'Ignite Lab 4',
         description:
           'This application is a notification center microservice developed during the fourth Ignite Lab. In this project, I improved my knowledge about Nest and Prisma, as well as learning about several new software design concepts.',
@@ -348,7 +370,7 @@ export const data = {
         images: ['/projects/ignite-lab-4/ignite-lab-4.png'],
       },
       {
-        id: 13,
+        id: 14,
         name: 'Gungi',
         description:
           'This is a fangame based on the game of same name in Hunter x Hunter, written by Togashi.',
@@ -356,7 +378,7 @@ export const data = {
         images: ['/projects/gungi/gungi-1.png', '/projects/gungi/gungi-2.png'],
       },
       {
-        id: 14,
+        id: 15,
         name: 'Worldtrip',
         description:
           "This project was one of Ignite's challenges. With it, I could improve my knowledge about ChackraUI.",
@@ -368,7 +390,7 @@ export const data = {
       },
 
       {
-        id: 15,
+        id: 16,
         name: 'Rocketshoes',
         description:
           "This project was one of Ignite's challenges. The objective was to create a Hook to manage the shopping cart.",
@@ -379,7 +401,7 @@ export const data = {
         ],
       },
       {
-        id: 16,
+        id: 17,
         name: 'Dashgo',
         description:
           'Dashgo was a project developed in Ignite, where I could use several ChakraUI components.',
@@ -387,7 +409,7 @@ export const data = {
         images: ['/projects/dashgo/dashgo.png', '/projects/dashgo/dashgo.gif'],
       },
       {
-        id: 17,
+        id: 18,
         name: 'GoMarketplace',
         description:
           'GoMarketplace is an e-commerce that was developed as one of the challenges of the Gostack bootcamp. It displays a list of products that come from a fakeapi. The user can add products to the cart, and the application calculates the quantity of products and the total price.',
@@ -398,7 +420,7 @@ export const data = {
         ],
       },
       {
-        id: 18,
+        id: 19,
         name: 'GoRestaurant',
         description:
           "This project was one of GoStack's challenges. It is an application to manage dishes from an Italian restaurant.",
@@ -489,7 +511,7 @@ export const data = {
         'React é uma biblioteca para desenvolvimento de interfaces reativas. É a tecnologia em que tenho mais domínio, e a que mais utilizei no último ano. Sei desenvolver interfaces completas e componentizadas, fazer requisições http, gerenciar estados, criar e utilizar hooks. Também tenho conhecimento sobre o fluxo de renderização do React e sei evitar certos erros que ocasionam rerenders de mais. Também tenho domínio em Next, um framework para utilizar em cima do React. Ele permite a utilização de SSR e SSG no React, e resolve problemas como SEO. Além disso, tenho alguma experiência com diversas ferramentas do ecossistema, como Styled Components, Stitches, Radix, Mantine, Framer Motion, React Hook Form, React Query, dentre outras.',
       node: 'Node é uma plataforma de exedcução de código javascript fora do navegador. Através dele, eu consigo desenvolver APIs REST em typescript, utilizando o Express. Sei lidar com bancos de dados utilizando ORMs como TypeORM, Prisma e Sequelize. Tenho alguns conhecimentos de arquitetura de software, como DDD e alguns princípios do SOLID. Sei escrever testes automatizados. Já tive um pouco de contato com Nest, GraphQL e Kafka. Embora eu seja capaz e não me importe de atuar como fullstack, hoje eu tenho um pouco de preferência pelo frontend.',
       reactNative:
-        'React Native é uma tecnologia que serve para desenvolver código para aplicativos tanto para Android como para IOS, com uma sintaxe muito semelhante a do React. Eu consigo criar aplicativos com React Native, mas considero minha experiência com essa tecnologia inferior a que eu tenho com as outras.',
+        'React Native é uma tecnologia que serve para desenvolver código para aplicativos tanto para Android como para IOS, com uma sintaxe muito semelhante a do React. Já criei aplicativos com e sem Expo, e tenho familiaridade com diversas ferramentas do ecossistema, como Styled Components, Moti, ',
     },
 
     en: {
@@ -498,7 +520,7 @@ export const data = {
         "React is a library for developing reactive interfaces. It's the technology I'm most proficient at, and the one I've used the most in the last year. I know how to develop complete and componentized interfaces, make http requests, manage states, create and use hooks. I'm also knowledgeable about React's rendering cycle and know how to avoid certain bad practices that cause too many renders. I also master Next, a framework to use on top of React. It allows the use of SSR and SSG in React, and solves problems like SEO. In addition, I have some experience with several libraries, such as Styled Components, Stitches, Radix, Mantine, Framer Motion, React Hook Form, React Query, among others.",
       node: "Node is a javascript runtime environment. Through it, I can develop REST APIs in typescript, using Express. I know how to deal with databases using ORMs like TypeORM, Prisma and Sequelize. I have some software design knowledge, like DDD and some SOLID principles. I can write tests. I already had a little contact with Nest, GraphQL and Kafka. While I'm capable of and don't mind being fullstack, today I have a bit of a preference for the frontend.",
       reactNative:
-        'React Native is a technology made to develop a single codebase for both Android and IOS, with a syntax very similar to that of React. I can build apps with React Native, but I consider my experience with this technology to be inferior to what I have with others.',
+        "React Native is a technology made to develop a single codebase for both Android and IOS, with a syntax very similar to that of React. I've created apps with and without Expo, and I'm familiar with several tools such as Styled Components and Moti.",
     },
   },
   header: {
